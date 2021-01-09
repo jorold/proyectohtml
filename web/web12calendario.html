@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calendario</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/evo-calendar.css" rel="stylesheet" type="text/css"/>        
+    </head>
+    <body>
+        <div id="calendario"></div>
+        <script src="js/jquery-3.5.1.min.js"></script>
+        <script src="js/evo-calendar.js"></script>
+     <script>
+          $('#calendario').evoCalendar({
+            language: 'es',
+            format: 'dd/mm/yyyy',
+            firstDayOfWeek: 1,
+            todayHighlight: false,
+            sidebarToggler: true,
+            eventListToggler: true,
+            canAddEvent: true,
+            /*calendarEvents: [
+                { name: "Año nuevo", date: "Mié Ene 01 2021 00:00:00 GMT+0200 (Greenwich Mean Time)", type: "holiday", everyYear: true },
+                { name: "San Valentin", date: "Vie Feb 14 2021 00:00:00 GMT+0200 (Greenwich Mean Time)", type: "holiday", everyYear: true },
+                { name: "Paciente #1", date: "03/Febrero/2021", type: "event" },
+                { name: "Paciente #2", date: "03/Febrero/2021", type: "event" },
+                { name: "Paciente #3", date: "03/Febrero/2021", type: "event" },
+                { name: "Paciente #4", date: "03/Febrero/2021", type: "event" },
+                { name: "Cumpleaños #2", date: "05/Febrero/2021", type: "birthday" },
+                { name: "Mi cumple", date: "10/Noviembre/2021", type: "birthday", everyYear: true },
+                { name: "Vacaciones #4", date: "01/Abril/2021", type: "event" },
+                { name: "Paciente #2", date: "10/Febrero/2021", type: "event" },
+                { name: "San José", date: "19/Marzo/2021", type: "holiday", everyYear: true }
+            ],*/
+            onSelectDate: function() {
+                 console.log('onSelectDate!')
+            },
+            onAddEvent: function() {
+                console.log('onAddEvent!')
+            }
+        });
+        //$("#evoCalendar").evoCalendar('addCalendarEvent', [...]);
+    </script>
+
+    </body>
+</html>

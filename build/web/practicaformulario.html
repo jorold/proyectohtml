@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Práctica Formulario</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>Práctica Formulario</h1>
+        <form>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>DESCRIPCIÓN</th>
+                    <th>DATOS</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Texto:</td>
+                    <td><input type ="text" placeholder="Introduzca nombre..." name="cajatexto" required/></td>
+                </tr>
+                <tr>
+                    <td>Email:</td>
+                    <td><input type ="email" name="email" placeholder="Introduzca correo electrónico"/></td>
+                </tr>
+                <tr>
+                    <td>Fecha nacimiento:</td>
+                    <td><input type ="date" name="fechanacimiento"/></td>
+                </tr>
+                <tr>
+                    <td>Web favorita:</td>
+                    <td><input type ="url" name="webfavorita" placeholder="http://www..."/></td>
+                </tr>
+                <tr>
+                    <td>Edad:</td>
+                    <td><input type ="number" name="edad" placeholder="Sólo números..."/></td>
+                </tr>
+                <tr>
+                    <td><button type ="submit">Enviar datos</button></td>
+                    <td><button type="reset">Borrar formulario</button></td>
+                </tr>
+            </tbody>        
+        </table>
+        </form>
+    </body>
+</html>

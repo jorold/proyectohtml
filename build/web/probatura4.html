@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Prueba 4</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <form>
+            <label>Introduzca un número</label>
+            <input type="number" id="cajavalor"/>
+            <button type="button" id="botonnum">
+                Pulsar para multiplicar
+            </button>
+        </form>
+        <hr/>
+        <div id="tabla"></div>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#botonnum").click(function(){
+               var numero = parseInt($("#cajavalor").val());
+               var tabla = "<table border='1'>";
+                for (var i = 1; i <= 10; i++) {
+                    tabla += "<tr>";
+                    tabla += "<td>" + numero + "*" + i + "</td>";
+                    var valor = numero * i;
+                    tabla += "<th>" + valor + "</th>";
+                    tabla += "</tr>";
+                }
+                tabla += "</table>";
+                $("#tabla").html(tabla);
+            });
+        });
+    </script>
+    </body>
+</html>

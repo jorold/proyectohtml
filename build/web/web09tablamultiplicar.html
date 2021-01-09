@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tabla multiplicar</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>Tabla de multiplicar</h1>
+        <label>Introduzca número a multiplicar</label>
+        <input type="number" id="cajanumero" name="cajanumero"/>
+        <button type="button" onclick="tablaMultiplicar()">
+            Mostar tabla
+        </button>
+        <hr/>
+        <div id="resultado"></div>
+        <script type="text/javascript">
+            function tablaMultiplicar(){
+                var cajanumero = document.getElementById("cajanumero");
+                var numero = parseInt(cajanumero.value);
+                var html = "<table>";
+                    for(var i = 1; i<=10; i+=1){
+                        html += "<tr>";
+                            html += "<td>"+ numero + " X " + i + " = " + (i*numero) + "</td>";
+                        html += "</tr>";
+                    }
+                html += "</table>";
+                var resultado = document.getElementById("resultado");
+                resultado.innerHTML = html;
+            }
+        </script>
+    </body>
+</html>

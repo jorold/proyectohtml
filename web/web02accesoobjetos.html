@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Acceso objetos</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>Acceso objetos</h1>
+        <button onclick="cambiarObjetos()">
+            Cambiar elementos
+        </button>
+        <p id="parrafo">Soy un párrafo</p>
+        <h1 id="contenido">Contenido</h1>
+        <input type="text" id="cajadato"/>
+        <br/><br/>
+        <img src="images/bandera.jpg" id="imagen"
+             width = "150" height = "100" alt=""
+             onmouseover="entrarImagen()"
+             onmouseout="salirImagen()"/>
+        <script type="text/javascript">
+            function entrarImagen(){
+                var imagen = document.getElementById("imagen");
+                imagen.src = "images/pensativo.jpg";
+            }
+            function salirImagen(){
+                var imagen = document.getElementById("imagen");
+                imagen.src = "images/desesperado.jpg";
+            }
+            function cambiarObjetos(){
+                var h1 = document.getElementById("contenido");
+                h1.innerText = "He cambiado";
+                var p = document.getElementById("parrafo");
+                p.innerHTML = "<input/>";
+                var cajadato = document.getElementById("cajadato");
+                cajadato.value = "Valor de caja";
+                var imagen = document.getElementById("imagen");
+                imagen.src = "images/su30.jpg";
+            }
+        </script>
+    </body>
+</html>

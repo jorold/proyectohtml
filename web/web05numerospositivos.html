@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Numeros positivos</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>Numeros Positivos o... No</h1>
+        <form>
+            <label>Introduzca un número:</label>
+            <input type="number" id="cajanumero" name="cajanumero">
+            <br/>
+            <button type="button" onclick="tipoNumero()">
+                Mostrar Resultado
+            </button>
+        </form>
+        <h1 id="resultado" style="color:black"></h1>
+        <script type="text/javascript">
+            function tipoNumero(){
+                var cajanumero = document.getElementById("cajanumero");
+                var numero = parseInt(cajanumero.value);
+                var resultado = document.getElementById("resultado");
+                if(numero==0){
+                    resultado.innerText = "El número es " + numero;
+                }else if(numero >=1){
+                    resultado.innerText = "El número " + numero + " es POSITIVO";
+                }else{
+                    resultado.innerText = "El número " + numero + " es NEGATIVO";
+                }
+            }
+        </script>
+    </body>
+</html>
